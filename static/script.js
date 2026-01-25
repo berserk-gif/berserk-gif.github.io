@@ -1,73 +1,48 @@
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 120;
 
-  const revealElements = document.querySelectorAll(
-    '.project, .info, .hero-card'
-  );
-
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-
-    revealElements.forEach(el => {
+  document
+    .querySelectorAll('.project-card, .info, .hero-card, .reveal')
+    .forEach(el => {
       const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-
       if (elementTop < windowHeight - revealPoint) {
         el.classList.add('active');
       }
     });
-  }
- 
-  const reveals = document.querySelectorAll(".reveal");
+}
 
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 120;
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+function openRepo(url) {
+  window.open(url, "_blank");
+}
+const cmds = document.querySelectorAll('.cmd');
 
-    reveals.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
-      if (cardTop < windowHeight - revealPoint) {
-        card.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-
-
-  
-  document.querySelectorAll('.mail-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.innerText = "Opening mail…";
-    });
+cmds.forEach((cmd, index) => {
+  const text = cmd.innerText;
+  cmd.innerText = '';
+  setTimeout(() => {
+    let i = 0;
+    const typing = setInterval(() => {
+      cmd.innerText += text[i];
+      i++;
+      if (i === text.length) clearInterval(typing);
+    }, 30);
+  }, index * 300);
+});
+document.querySelectorAll('.mail-btn, .terminal-link').forEach(link => {
+  link.addEventListener('click', () => {
+    link.style.opacity = "0.8";
   });
-
-  const cmds = document.querySelectorAll('.cmd');
-
-  cmds.forEach((cmd, index) => {
-    const text = cmd.innerText;
-    cmd.innerText = '';
-    setTimeout(() => {
-      let i = 0;
-      const typing = setInterval(() => {
-        cmd.innerText += text[i];
-        i++;
-        if (i === text.length) clearInterval(typing);
-      }, 30);
-    }, index * 300);
-  });
- 
-  function openRepo(url) {
-    window.open(url, "_blank");
-  }
-  const resumeBtn = document.querySelector(".resume-download");
+});
+const resumeBtn = document.querySelector(".resume-download");
 if (resumeBtn) {
   resumeBtn.style.opacity = "0";
   setTimeout(() => {
     resumeBtn.style.opacity = "1";
   }, 600);
 }
-
-  // cursor-aware hover glow
 document.querySelectorAll(".project-card, .info").forEach(card => {
   card.addEventListener("mousemove", e => {
     const rect = card.getBoundingClientRect();
@@ -75,10 +50,3 @@ document.querySelectorAll(".project-card, .info").forEach(card => {
     card.style.setProperty("--y", `${e.clientY - rect.top}px`);
   });
 });
-
-
-
-
-
-
-
