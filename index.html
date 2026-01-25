@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhinav Saklani | Developer Portfolio</title>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Aspiring Full‑Stack Developer</div>
+        <h1>Hi, I'm <span>Abhinav</span>.<br>I build clean & scalable web experiences.</h1>
+        <p>
+          I'm a fresher developer with a strong foundation in <b>HTML, CSS, JavaScript</b> and <b>Python</b>. 
+          I love turning ideas into real, usable products while learning something new every day.
+        </p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="mailto:abhinavsaklani1@example.com" class="btn secondary mail-btn">Contact Me</a>
+
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Tech Stack</h3>
+        <div class="skills">
+          <div class="skill">HTML5</div>
+          <div class="skill">CSS3</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Python</div>
+          <div class="skill">Git & GitHub</div>
+          <div class="skill">Basics of Flask</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">
+      Real projects with source code available on GitHub.
+    </p>
+
+    <div class="projects">
+
+      
+       <div class="project-card reveal"
+           onclick="openRepo('https://github.com/berserk-gif/college-chatbot')">
+                  <div class="project-header">
+                    <i class="fa-solid fa-robot"></i>
+                          <h3>Smart College Enquiry Bot</h3>
+                  </div>
+                    <p>
+                        A chatbot that answers common college queries using Python and basic NLP concepts.
+                    </p>
+                      <span class="project-link">
+                            View on GitHub <i class="fa-brands fa-github"></i>
+                    </span>
+        </div>
+
+
+         <div class="project-card reveal"
+           onclick="openRepo('https://github.com/yourusername/weather-app')">
+          <div class="project-header">
+                <i class="fa-solid fa-cloud-sun"></i>
+                    <h3>Weather Forecast Web App</h3>
+          </div>
+                <p>
+                     A clean UI web app that shows real-time weather data using APIs and JavaScript.
+               </p>
+                    <span class="project-link">
+                           View on GitHub <i class="fa-brands fa-github"></i>
+                    </span>
+          </div>
+
+          <div class="project-card reveal"
+              onclick="openRepo('https://github.com/berserk-gif/web-portfolio')">
+                  <div class="project-header">
+                      <i class="fa-solid fa-code"></i>
+                               <h3>Personal Portfolio Website</h3>
+                </div>
+                     <p>
+                        A modern responsive portfolio designed using pure HTML, CSS, and animations.
+                    </p>
+                        <span class="project-link">
+                                    View on GitHub <i class="fa-brands fa-github"></i>
+                        </span>
+                 </div>
+    </div>
+  </div>
+</section>
+
+  <!-- 6 SECTIONS -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why Me?</h2>
+      <p class="section-sub">Six strong reasons that define my mindset and approach.</p>
+      <div class="info-grid">
+        <div class="info"><h4>Strong Fundamentals</h4><p>I focus on mastering core concepts instead of blindly using frameworks.</p></div>
+        <div class="info"><h4>Fast Learner</h4><p>I quickly adapt to new tools, technologies, and workflows.</p></div>
+        <div class="info"><h4>Problem Solver</h4><p>I enjoy breaking down problems and finding efficient, logical solutions.</p></div>
+        <div class="info"><h4>Clean Code</h4><p>I write readable, maintainable code with future scalability in mind.</p></div>
+        <div class="info"><h4>Consistent Practice</h4><p>I believe consistency beats motivation and practice daily.</p></div>
+        <div class="info"><h4>Growth Mindset</h4><p>I see feedback and challenges as opportunities to improve.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="terminal-contact">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+
+    <div class="terminal-body">
+      <p class="cmd">$ whoami</p>
+      <p class="output">Abhinav Saklani — Fresher Developer</p>
+
+      <p class="cmd">$ location --current</p>
+      <p class="output">
+        <i class="fa-solid fa-location-dot"></i> New Delhi, India
+      </p>
+
+      <p class="cmd">$ contact --email</p>
+      <a href="abhinavsaklani1@gmail.com" class="terminal-link">
+        <i class="fa-solid fa-envelope"></i> abhinavsaklani1@gmail.com
+      </a>
+
+      <p class="cmd">$ social --links</p>
+      <div class="terminal-links">
+        <a href="https://github.com/breserk_gif" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+      <p class="cmd">$ resume --download</p>
+
+            <a href="assets/Abhinav_Saklani_Resume.pdf"
+                class="terminal-link resume-download"
+                   download>
+                     <i class="fa-solid fa-file-arrow-down"></i>
+                       Download Resume (PDF)
+                          </a>
+
+
+      <p class="cmd">$ status</p>
+      <p class="output">✔ Open for internships & entry-level roles</p>
+
+      <p class="cmd blink">$</p>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="assets/pfp.jpeg" alt="Abhinav Saklani" class="footer-avatar">
+
+      <div class="footer-text">
+        <h4>Abhinav Saklani</h4>
+        <p>Fresher Full-Stack Developer</p>
+
+        <div class="footer-socials">
+          <a href="https://github.com/berserk-gif" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:abhinavsaklani1@example.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copy">
+      © 2026 Abhinav Saklani. Built with focus, consistency, and curiosity.
+    </p>
+  </div>
+  
+</footer>
+
+
+  <script src="static/script.js"></script>
+
+</body>
+</html>
